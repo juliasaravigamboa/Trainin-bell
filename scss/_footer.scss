@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Roboto:wght@300&display=swap');
+@import "variables";
+
+footer {
+    height: 100px;
+    background-color: $colorFondo;
+    opacity: 1;
+    color: $colorDos;
+}
+.pie{
+    height: 100px;
+    background-color: $colorFondo;
+    opacity: 1;
+    margin-top: 3em;
+    text-align: center; 
+}
+.pie__info{
+        color: $colorDos;
+}
+.boton{
+    background-color:rgb(99, 245, 136);
+    border: solid;
+    color: black;
+    font-size: 20px;
+    font-family: 'Bebas Neue', cursive;  
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 14px 16px;
+    border-radius: 4px;
+    margin-left: 50%;
+    text-decoration: none;
+}

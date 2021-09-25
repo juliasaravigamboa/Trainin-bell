@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Roboto:wght@300&display=swap');
+@import "variables";
+@mixin titulosprincipales( $color, $tipografia, $alineacion, $tamanio, $margen, $efecto) {
+    color: $color;
+    font-family: $tipografia;
+    text-align: $alineacion;
+    font-size: $tamanio;
+    margin-top: $margen;
+    transition: $efecto;
+ 
+}
+
+/*TITULOS------------------------------------------------------------*/
+
+
+h1 {
+
+    @include titulosprincipales(rgb(17, 189, 60), 'Bebas Neue', center , 40px, 1em ,all 1s);
+}
+
+
+h2 {
+    color: $colorDos;
+    font-size: 30px;
+    font-family: 'Bebas Neue', cursive;
+    margin-top: 2em;
+    margin-left: 2em;
+}
+
+h3 {
+   color: $colorDos;
+   font-size: 25px;
+   font-family: 'Bebas Neue', cursive;
+   margin-top: 2em;
+   margin-left: 2em;
+}
+h4 {
+    color: black;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 35px;
+    
+}
+h5{
+    color: $ColorUno;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 20px;  
+}
+
+/*PARRAFOS----------------------------------------------------------*/
+
+p{
+    color: $colorParrafos;
+    font-size: 20px;
+    line-height: 1.6;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*CUERPO-------------------------------------------------------------*/
+.header ul{
+    z-index: 0;
+}
+
+body {
+    background-color: $colorFondo;
+    opacity: 1;
+}
+
+/*INDEX---------------------------------------------------------------*/
+#header{
+    position:relative;
+    z-index:50;
+}
+
+
+.presentacion{
+    display: flex;
+    border: solid $ColorUno;
+    height: 25%;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    box-shadow: 5px 5px 50px #3ff1578f;
+    transition: height 0s, width 0s;  
+}
+
+
+.contenedor{
+    margin: 1em;
+    width: auto;
+}
+.contenedor__subtitulo{
+    color:rgb(54, 175, 84);
+    font-size: 25px;
+    font-family: 'Bebas Neue', cursive;
+    margin-top: 2em;
+    margin-left: 2em;
+
+}
+.contenedor__desarrollo{
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 2em; 
+    margin-right: 2em;  
+
+}
+.fotosMuestra{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    
+    
+}
+.fotosMuestra__img{
+    width: 70%;
+    margin-left: 10%;
+}
+.tamaniovideo{
+    margin-top: 3em;
+   
+}
+.tamaniovideo__video{
+    width: 75%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.divGrad {
+    background-image: linear-gradient(to bottom right, #3ff156, rgb(136, 189, 136));
+    height: 100px;
+    color: black;
+    line-height: 100px;
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    vertical-align:middle;
+    
+}
+
+div.card-group {
+    display: flex;
+    margin-left: 5em;
+    margin-right: 5em; 
+    border: $card-border-radius;
+    color: $card-color;
+}
+div.card-body{
+    background-color: black;
+}
+
+#text{
+    color: black;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 15px;
+}
+
+
+
+/*QUIENES SOMOS------------------------------------------------------*/
+
+.margen__p{
+    @extend.contenedor__desarrollo;
+}
+
+.imagen__center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 700px;
+    justify-content: space-evenly;
+}
+
+/*GALERIA------------------------------------------------------------*/
+
+div.videoGaleria{
+    display: flex;   
+}  
+div.row{
+    margin-left: 10em;
+    margin-right: 3em;
+}
+.intro{
+    @extend .tamaniovideo__video;
+}
+.paraMasOnda {
+    margin-bottom: 3em;
+    display: flex;  
+    flex-flow: row wrap;  
+    align-items:center;
+    color: black;
+    overflow: hidden;
+}
+.paraMasOnda__item{
+    text-decoration: none;
+    color: black
+}    
+
+
+/*PROMOCIONES------------------------------------------------------*/
+table {
+    border: 3px solid;
+    width: 50%;
+    margin-left: 25%;
+    text-align: center;
+}
+
+th {
+
+    background-color: rgb(37, 197, 77);
+    border: 1px solid;
+    height: 50px;
+    color: black;
+}
+
+td {
+    border: 1px solid white;
+    color: white;
+}  
+
+.slidePromo {
+    height: 50%;
+    width: 75%;
+    margin-left: 10%;
+    
+}
+#ofrecemos{
+    height: auto;
+    width: auto;
+    background-color: rgb(51, 50, 50);
+    opacity: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    margin: 3em;
+    flex-wrap: wrap;
+    align-items: center;
+    line-height: 100%;
+}
+
+.tiposClases {
+    height: 80px;
+    width: 200px;
+    background-color: black;
+    text-align: center;
+    line-height: 100%;
+    border: #3ff156 solid;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 5px 5px 50px #3ff1578f;
+    transition: height 0s, width 0s;       
+}
+
+.tiposClases:hover {
+    height: 100px; 
+    width: 250px;
+   
+}
+.promos{
+    @extend.divGrad;
+}
+
+/*BLOG--------------------------------------------------------------*/
+.infoCorrecta{
+    @extend .contenedor__desarrollo;  
+}
+
+/*CONTACTO-----------------------------------------------------------*/
+
+input {
+    width: 40%;
+  }
+  
+input[type=text] {
+    padding: 10px 12px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 4px;
+}     
+label{
+    color:$ColorUno;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+input [type=checkbox]{
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+input[type="submit"]{
+    width: 100px;
+    height: 50px; 
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif; 
+    background-color: $ColorUno;
+
+}
+input[type="reset"]{
+    width: 100px;
+    height: 50px;
+    box-sizing: border-box;
+    border-radius: 4px;  
+    font-family: 'Roboto', sans-serif; 
+    background-color: $ColorUno;
+}
+
+.redes{
+    @extend .divGrad;
+}
+.redes__item{
+    @extend .paraMasOnda__item;
+}
